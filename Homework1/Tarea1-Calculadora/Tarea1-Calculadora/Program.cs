@@ -7,6 +7,8 @@ while (!salir)
     Console.WriteLine("        MENU PRINCIPAL");
     Console.WriteLine("                            ");
     Console.WriteLine("1. Calculadora");
+    //Geylix Anabel Lara de Jesus 2025-2530
+
     Console.WriteLine("2. Verificar si un estudiante aprobo");
     Console.WriteLine("3. Salir");
     Console.Write("Seleccione una opcion: ");

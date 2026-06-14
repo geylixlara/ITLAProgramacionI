@@ -1,5 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿//using System;
+//using System.Collections.Generic;
 
 class Habitacion
 {
@@ -13,7 +13,7 @@ class Habitacion
         Tipo = tipo;
         Estado = "Disponible";
     }
-}
+}                                   // esa es una clase o
 
 class Huesped
 {
@@ -205,7 +205,7 @@ class Program
         Console.WriteLine("Reserva registrada.");
     }
 
-    static void MostrarDisponibles()
+    static void MostrarDisponibles() // esas no se pueden por ejemplo?
     {
         Console.WriteLine("\nHabitaciones disponibles:");
 
