@@ -96,3 +96,26 @@ public void ListarHuespedes()
         Console.WriteLine(h);
     }
 }
+public void BuscarHabitacionPorNumero(int numero)
+{
+    foreach (var h in habitaciones)
+    {
+        if (h.Numero == numero)
+        {
+            Console.WriteLine(h);
+            return;
+        }
+    }
+    Console.WriteLine("No encontrada.");
+}
+
+public void BuscarHuespedPorNombre(string nombre)
+{
+    foreach (var h in huespedes)
+    {
+        if (h.Nombre.ToLower().Contains(nombre.ToLower()))
+        {
+            Console.WriteLine(h);
+        }
+    }
+}
