@@ -147,3 +147,48 @@ public void EliminarHuesped(int id)
     }
     Console.WriteLine("No encontrado.");
 }
+private int nextReservaId = 1;
+
+public void CrearReserva(int idHuesped, int numeroHabitacion, DateTime entrada, DateTime salida)
+{
+    Huesped huesped = null;
+    foreach (var h in huespedes)
+    {
+        if (h.Id == idHuesped)
+        {
+            huesped = h;
+            break;
+        }
+    }
+
+    if (huesped == null)
+    {
+        Console.WriteLine("Huésped no encontrado.");
+        return;
+    }
+
+    Habitacion habitacion = null;
+    foreach (var h in habitaciones)
+    {
+        if (h.Numero == numeroHabitacion)
+        {
+            habitacion = h;
+            break;
+        }
+    }
+
+    if (habitacion == null)
+    {
+        Console.WriteLine(" Habitación no encontrada.");
+        return;
+    }
+
+    if (!habitacion.Disponible)
+    {
+        Console.WriteLine("Habitación no disponible.");
+        return;
+    }
+
+    reservas.Add(new Reserva(nextReservaId++, huesped, habitacion, entrada, salida));
+    Console.WriteLine("Reserva creada.");
+}
