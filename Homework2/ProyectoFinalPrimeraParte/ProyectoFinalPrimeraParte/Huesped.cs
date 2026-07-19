@@ -1,5 +1,6 @@
 ﻿
-    public class Huesped
+//Geylix Anabel Lara de Jesus 2025-2530
+public class Huesped
     {
         public int Id { get; set; }
         public string Nombre { get; set; }

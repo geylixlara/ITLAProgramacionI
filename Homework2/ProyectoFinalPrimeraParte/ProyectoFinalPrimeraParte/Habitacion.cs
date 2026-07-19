@@ -1,5 +1,7 @@
 ﻿
-    public abstract class Habitacion
+//Geylix Anabel Lara de Jesus 2025-2530
+public abstract class Habitacion
+
     {
         public int Numero { get; set; }
         public decimal Precio { get; set; }
