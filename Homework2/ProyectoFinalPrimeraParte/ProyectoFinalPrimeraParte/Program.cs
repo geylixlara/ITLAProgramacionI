@@ -64,3 +64,20 @@ public class Reserva
         return $"Reserva #{Id} - {Huesped.Nombre} - Hab.{Habitacion.Numero} - {Estado}";
     }
 }
+public class HotelService
+{
+    private List<Habitacion> habitaciones = new List<Habitacion>();
+    private List<Huesped> huespedes = new List<Huesped>();
+
+    public void AgregarHabitacion(int numero, string tipo, decimal precio)
+    {
+        habitaciones.Add(new Habitacion(numero, tipo, precio));
+        Console.WriteLine("Habitación agregada.");
+    }
+
+    public void AgregarHuesped(string nombre, string telefono, string correo)
+    {
+        huespedes.Add(new Huesped(1, nombre, telefono, correo));
+        Console.WriteLine("Huésped agregado.");
+    }
+}
