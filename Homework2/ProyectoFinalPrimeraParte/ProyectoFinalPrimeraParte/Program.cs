@@ -192,3 +192,24 @@ public void CrearReserva(int idHuesped, int numeroHabitacion, DateTime entrada, 
     reservas.Add(new Reserva(nextReservaId++, huesped, habitacion, entrada, salida));
     Console.WriteLine("Reserva creada.");
 }
+public void CancelarReserva(int idReserva)
+{
+    foreach (var r in reservas)
+    {
+        if (r.Id == idReserva)
+        {
+            if (r.Estado == "Activa")
+            {
+                r.Estado = "Cancelada";
+                r.Habitacion.Disponible = true;
+                Console.WriteLine($" Reserva #{idReserva} cancelada.");
+            }
+            else
+            {
+                Console.WriteLine($"La reserva no está activa.");
+            }
+            return;
+        }
+    }
+    Console.WriteLine("Reserva no encontrada.");
+}
