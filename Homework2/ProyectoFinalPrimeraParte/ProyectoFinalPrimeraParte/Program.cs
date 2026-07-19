@@ -64,6 +64,7 @@ public class Reserva
         return $"Reserva #{Id} - {Huesped.Nombre} - Hab.{Habitacion.Numero} - {Estado}";
     }
 }
+
 public class HotelService
 {
     private List<Habitacion> habitaciones = new List<Habitacion>();
@@ -118,4 +119,31 @@ public void BuscarHuespedPorNombre(string nombre)
             Console.WriteLine(h);
         }
     }
+}
+public void ModificarEstadoHabitacion(int numero, bool disponible)
+{
+    foreach (var h in habitaciones)
+    {
+        if (h.Numero == numero)
+        {
+            h.Disponible = disponible;
+            Console.WriteLine($"Estado actualizado.");
+            return;
+        }
+    }
+    Console.WriteLine("No encontrada.");
+}
+
+public void EliminarHuesped(int id)
+{
+    for (int i = 0; i < huespedes.Count; i++)
+    {
+        if (huespedes[i].Id == id)
+        {
+            huespedes.RemoveAt(i);
+            Console.WriteLine("Eliminado.");
+            return;
+        }
+    }
+    Console.WriteLine("No encontrado.");
 }
