@@ -81,3 +81,18 @@ public class HotelService
         Console.WriteLine("Huésped agregado.");
     }
 }
+public void ListarHabitaciones()
+{
+    foreach (var h in habitaciones)
+    {
+        Console.WriteLine(h);
+    }
+}
+
+public void ListarHuespedes()
+{
+    foreach (var h in huespedes)
+    {
+        Console.WriteLine(h);
+    }
+}
