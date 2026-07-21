@@ -17,14 +17,14 @@ class Program
         {
             Console.Clear();
 
-            Console.WriteLine("===== SISTEMA DE REGISTRO DE HOTEL =====");
+            Console.WriteLine("     SISTEMA DE REGISTRO DE HOTEL     ");
             Console.WriteLine("1. Agregar habitación");
             Console.WriteLine("2. Agregar huésped");
             Console.WriteLine("3. Mostrar habitaciones");
             Console.WriteLine("4. Mostrar huéspedes");
             Console.WriteLine("0. Salir");
 
-            Console.Write("\nOpción: ");
+            Console.Write(" Opción: ");
             opcion = Convert.ToInt32(Console.ReadLine());
 
             switch (opcion)
@@ -92,7 +92,7 @@ class Program
 
     static void MostrarHabitaciones()
     {
-        Console.WriteLine("\n=== HABITACIONES ===");
+        Console.WriteLine("\n    HABITACIONES    ");
 
         if (numeros.Count == 0)
         {
@@ -111,7 +111,7 @@ class Program
 
     static void MostrarHuespedes()
     {
-        Console.WriteLine("\n=== HUÉSPEDES ===");
+        Console.WriteLine("\n   HUÉSPEDES   ");
 
         if (huespedes.Count == 0)
         {
