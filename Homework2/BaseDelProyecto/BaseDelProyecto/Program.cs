@@ -105,7 +105,6 @@ class Program
             Console.WriteLine("Número: " + numeros[i]);
             Console.WriteLine("Tipo: " + tipos[i]);
             Console.WriteLine("Precio: RD$" + precios[i]);
-            Console.WriteLine("---------------------------");
         }
     }
 
@@ -124,7 +123,6 @@ class Program
             Console.WriteLine("Nombre: " + huespedes[i]);
             Console.WriteLine("Teléfono: " + telefonos[i]);
             Console.WriteLine("Correo: " + correos[i]);
-            Console.WriteLine("---------------------------");
         }
     }
 }
